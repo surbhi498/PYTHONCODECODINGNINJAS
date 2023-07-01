@@ -54,3 +54,15 @@ def rotate(arr, n, d):
             arr[t-1] = arr[t]
     # arr.extend(arr[:d])
     # del arr[:d]
+rom sys import stdin
+
+
+def rotate(arr, n, d):
+    #Your code goes here
+      temp =arr[:d]
+      for i in range(0,n-d):
+          arr[i]=arr[i+d]
+      for j in range(n-d,n):
+            arr[j]=temp[j-n+d]         
+
+
